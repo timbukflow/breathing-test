@@ -1,24 +1,146 @@
-body {
-  background: #F5FBFB;
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  justify-content: center;
+* {
+    box-sizing: border-box;
 }
 
-.watch-face {
-  height: 225px;
-  width: 225px;
-  
+body {
+  background: #fff;
+}
+
+h3 {
+    font-family: 'Signika', sans-serif;
+    color: #005A32;
+    font-weight: 100;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding-top: 70px;
+    font-size: 36px;
+    hyphens: auto;
+}
+
+a {
+    font-family: 'Signika', sans-serif;
+    color: #005A32;
+    font-weight: 100;
+    text-decoration: none;
+} 
+
+/*---------------------------------- 
+main-nav
+-----------------------------------*/
+#navcontainer {
+    background-color: white;
+    width: 100%;
+    padding: 40px 5%;
+    position: fixed;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 100;
+    top: 0;
+}
+
+.nav-left  {
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 180px;
+}
+
+.topnavleft {
+    float: left;
+    padding: 35px;
+    margin: 0px;
+    font-size: 18px;
+
+}
+
+.topnavright {
+    float: right;
+    padding: 35px;
+    margin: 0px;
+    font-size: 18px;
+
+}
+
+/*---------------------------------- 
+responsive-nav-is-clean
+-----------------------------------*/
+
+.topnav .close {
+    display: none;
+    padding-top: 10px;
+}
+
+.topnav .close:hover {
+    color: rgba(255, 0, 0, 0.8); 
+}
+
+.topnav .menu {
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+    .nav-left {width: 90%;}
+    .topnav .navresp {display: none; padding: 16px 0px;}
+    .topnav .menu {
+        display: block;
+        padding: 12px 0px 0px 0px; 
+    }
+}
+@media screen and (min-width: 931px) {
+    .topnav .navresp {display: inline-block !important;}
+    .topnav .menu {display: none;}
+    .close {display: none !important;}
+}
+
+.start-container {
+    height: 100vh;
+}
+
+.circle-container {
+    height: 225px;
+    width: 225px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.header-container {
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    position: absolute;
+}
+
+.ein {
+      animation: ein 4s ease-in-out alternate infinite;
+}
+
+@keyframes ein {
+    0%      { color: rgba(0, 90, 50, 1);}
+    100%    { color: rgba(0, 90, 50, 0.25);}
+}
+
+.aus {
+    animation: aus 4s ease-in-out alternate infinite;
+}
+
+@keyframes aus {
+    0%      { color: rgba(0, 90, 50, 0.25);}
+    100%    { color: rgba(0, 90, 50, 1);}
 }
 
 .circle {
-  background: #009632;
+  background: #008D00;
   height: 220px;
   width: 220px;
   border-radius: 50%;
   position: absolute;
-  opacity: 0.25;
+  opacity: 0.4;
   transform: translate(0, 0);
 }
 
